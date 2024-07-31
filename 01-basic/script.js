@@ -38,5 +38,6 @@ cyclingPath.addTo(map);
 
 
 //get Geo json. They can be export from a web. json file. 
+//Geojson is the same as json, but its a standard. 
 
 })
