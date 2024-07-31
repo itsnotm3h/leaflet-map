@@ -29,6 +29,7 @@ let circle = L.circle([1.3294,103.8021],{color:"red",fillColor:"orange",radius:2
 
 circle.addTo(map);
 
+// await must be use wth promise.
 let response = await axios.get("cycling.geojson");
 console.log(response.data);
 
