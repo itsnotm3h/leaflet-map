@@ -1,0 +1,6 @@
+#map{
+    /* leftmap is a canvas object,
+    canvas allow you to draw shapes and lines.
+    By default canvas does not have a height even if u draw stuff inside.  */
+    height: 90vh;
+}

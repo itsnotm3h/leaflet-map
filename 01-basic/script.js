@@ -10,18 +10,21 @@ document.addEventListener("DOMContentLoaded", async function(){
     // setup the tile layers
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19, attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>' }).addTo(map);
 
-//add Marker
-let internationPlaza = L.marker([1.2761,103.8458]);
-// internationPlaza.addTo(map);
-map.addLayer(internationPlaza); // anyObjects that can be drawn on the map is a later. 
-//show html when the marker is clicked
-internationPlaza.bindPopup("Welcome to singapore")
+// //add Marker
+// let internationPlaza = L.marker([1.2761,103.8458]);
+// // internationPlaza.addTo(map);
+// map.addLayer(internationPlaza); // anyObjects that can be drawn on the map is a later. 
+// //show html when the marker is clicked
+// internationPlaza.bindPopup("Welcome to singapore")
 
-let changiAirport =  L.marker([1.3586,103.9899]);
-changiAirport.addTo(map);
-changiAirport.addEventListener("click",function(){
-    alert("Hello");
-})
+let newMarker = L.marker([1.2834,103.8607]);
+map.addLayer(newMarker); 
+
+// let changiAirport =  L.marker([1.3586,103.9899]);
+// changiAirport.addTo(map);
+// changiAirport.addEventListener("click",function(){
+//     alert("Hello");
+// })
 
 //first paerameter = array latlng, second parameter is the properties of the circle. 
 let circle = L.circle([1.3294,103.8021],{color:"red",fillColor:"orange",radius:2000});
@@ -37,8 +40,15 @@ let cyclingPath = L.geoJson(response.data);
 
 cyclingPath.addTo(map);
 
+let taxiResponnse = await axios.get("http")
+
 
 //get Geo json. They can be export from a web. json file. 
 //Geojson is the same as json, but its a standard. 
+
+
+
+
+
 
 })
